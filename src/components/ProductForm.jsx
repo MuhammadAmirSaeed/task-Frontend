@@ -20,7 +20,7 @@ const ProductForm = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     // Ensuring quantity is never less than 1
-  if (name === 'quantity') {
+    if (name === 'quantity' || name === 'price'){
     const parsedValue = parseInt(value, 10);
     if (parsedValue < 1) {
       
