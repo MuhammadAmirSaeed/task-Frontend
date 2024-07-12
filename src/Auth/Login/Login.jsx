@@ -79,7 +79,7 @@ const Login = () => {
     } catch (error) {
       console.error("Login error:", error.message);
       setIsloading(false);
-      showSnackbar("error", `invalid email or password ${error.message}`);
+      showSnackbar("error", ` ${error.message}`);
     }
     setIsloading(false);
   };
