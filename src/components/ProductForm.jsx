@@ -19,22 +19,27 @@ const ProductForm = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    // Ensuring quantity is never less than 1
-    if (name === 'quantity' || name === 'price'){
-    const parsedValue = parseInt(value, 10);
-    if (parsedValue < 1) {
-      
-      setProduct(prevProduct => ({
-        ...prevProduct,
-        [name]: '1', 
-      }));
+
+    // Ensure quantity and price are not less than 1
+    if (name === 'quantity' || name === 'price') {
+      const parsedValue = parseInt(value, 10);
+      if (parsedValue < 1) {
+        setProduct(prevProduct => ({
+          ...prevProduct,
+          [name]: '1', // Set to 1 if value is less than 1
+        }));
+      } else {
+        setProduct(prevProduct => ({
+          ...prevProduct,
+          [name]: value,
+        }));
+      }
     } else {
       setProduct(prevProduct => ({
         ...prevProduct,
         [name]: value,
       }));
     }
-  } 
   };
 
   const handleFileChange = (e, index) => {

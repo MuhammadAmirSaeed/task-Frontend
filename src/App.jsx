@@ -16,7 +16,7 @@ function App() {
     <BrowserRouter>
       <Routes>
       <Route path='/products' element ={<Products/>} />
-        <Route path ="/" index element={<Login/>} />
+        <Route path ="/" element={<Login/>} />
         <Route element={<ProtectedRoute />}>
         <Route path='/add-products'  element={<ProductForm/>} />
         </Route>
