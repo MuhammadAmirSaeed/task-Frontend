@@ -4,7 +4,7 @@ import { getCookie } from '../utils/cookiesConfig';
 const token = getCookie('token');
 const axiosInstance = axios.create({
   // baseURL: "http://localhost:8000", 
-  baseURL: "https://task-backend-e-commerce-h77k68dnw-amir-saeeds-projects.vercel.app/", // Base URL for your API requests
+  baseURL: "https://task-backend-e-commerce.vercel.app", // Base URL for your API requests
   
   headers: {
     "Content-Type": "application/json",
