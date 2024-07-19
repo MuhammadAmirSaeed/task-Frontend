@@ -4,7 +4,7 @@ import { getCookie } from "../utils/cookiesConfig";
 
 function ProtectedRoute({ element, ...rest }) {
     const token = getCookie('token');
-
+// console.log(token);
  
 
   if (!token) {
